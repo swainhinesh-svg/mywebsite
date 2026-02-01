@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Swain</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine 😏</title>
+
+<style>
+  body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ffe6eb;
+    font-family: Arial, sans-serif;
+    overflow:hidden;
+  }
+
+  .card{
+    background:white;
+    padding:22px;
+    border-radius:22px;
+    text-align:center;
+    width:320px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+  }
+
+  h2{
+    color:#ff4d6d;
+    margin-bottom:5px;
+  }
+
+  img{
+    width:190px;
+    border-radius:18px;
+    margin:12px 0;
+  }
+
+  #line{
+    min-height:42px;
+    font-size:15px;
+    color:#555;
+    margin:8px 0;
+  }
+
+  button{
+    padding:10px 20px;
+    border:none;
+    border-radius:22px;
+    font-size:16px;
+    margin:8px;
+    cursor:pointer;
+  }
+
+  #yes{
+    background:#ff4d6d;
+    color:white;
+  }
+
+  #no{
+    background:#ccc;
+    position:absolute;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>Bhagyashree 💖</h2>
+  <p>Will you be my Valentine?</p>
+
+  <!-- Romantic GIF -->
+  <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" alt="love">
+
+  <div id="line">Soch lo na 😌</div>
+
+  <button id="yes" onclick="yes()">YES</button>
+  <button id="no" onclick="move()">NO</button>
+</div>
+
+<script>
+let lines = [
+  "Maan v jao na pls 🥺",
+  "Fir se NO? 😅",
+  "Are itna kya ghamand 😜",
+  "Dil se bol raha hoon 💗",
+  "Ek baar YES bol do na 😌",
+  "Itna bhaav acha nahi lagta 😏",
+  "Ab toh YES hi bacha hai 😂"
+];
+
+let i = 0;
+
+function move(){
+  let no = document.getElementById("no");
+
+  let x = Math.random() * (window.innerWidth - 100);
+  let y = Math.random() * (window.innerHeight - 60);
+
+  no.style.left = x + "px";
+  no.style.top = y + "px";
+
+  document.getElementById("line").innerText =
+    lines[i % lines.length];
+  i++;
+}
+
+function yes(){
+  document.body.innerHTML = `
+    <div style="text-align:center; padding:20px;">
+      <h1 style="color:#ff4d6d">Hehe 😄💖</h1>
+      <h2>Bhagyashree 🌸</h2>
+
+      <p style="font-size:18px; line-height:1.6;">
+        Valentine Day abhi aaya nahi 🙂<br>
+
+        Batao… kaisa laga mera mazaak? 💗<br><br>
+
+        Agar tum chahti ho yeh codes aur process bataun 🙂<br>
+        toh mera <b>crush ka number</b> le ke do 😏
+      </p>
+
+      <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif"
+           style="width:220px; border-radius:20px;">
+    </div>
+  `;
+}
+</script>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
